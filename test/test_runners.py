@@ -1,5 +1,6 @@
 import tempfile
 import unittest
+from unittest.mock import patch
 
 import ambrs.aerosol as aerosol
 import ambrs.partmc as partmc
