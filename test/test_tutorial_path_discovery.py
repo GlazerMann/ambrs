@@ -9,7 +9,7 @@ import pytest
 
 NOTEBOOK = (
     Path(__file__).resolve().parents[1]
-    / "tutorial/notebooks/02_run_prepare_plot/01_single_scenario_partmc.ipynb"
+    / "tutorial/notebooks/01_run_models/01_single_scenario_partmc.ipynb"
 )
 
 
@@ -36,7 +36,7 @@ def _find_tutorial_root_function():
 
 def _make_tutorial(tmp_path):
     repo = tmp_path / "ambrs"
-    (repo / "tutorial/notebooks/02_run_prepare_plot").mkdir(parents=True)
+    (repo / "tutorial/notebooks/01_run_models").mkdir(parents=True)
     return repo
 
 
@@ -48,7 +48,7 @@ def test_find_tutorial_root_from_repository_root(tmp_path, monkeypatch):
 
 def test_find_tutorial_root_from_notebook_directory(tmp_path, monkeypatch):
     repo = _make_tutorial(tmp_path)
-    monkeypatch.chdir(repo / "tutorial/notebooks/02_run_prepare_plot")
+    monkeypatch.chdir(repo / "tutorial/notebooks/01_run_models")
     assert _find_tutorial_root_function()() == repo / "tutorial"
 
 
