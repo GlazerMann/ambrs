@@ -475,7 +475,7 @@ def retrieve_model_state(
         
         thermodynamics = { 
             'T':scenario.temperature,
-            'p':scenario.temperature,
+            'p':scenario.pressure,
             'RH':scenario.relative_humidity}
         
     else:
@@ -503,7 +503,7 @@ def retrieve_model_state(
         
         thermodynamics = { 
             'T':scenario.temperature,
-            'p':scenario.temperature,
+            'p':scenario.pressure,
             'RH':scenario.relative_humidity}
         
     # fixme: update model state
