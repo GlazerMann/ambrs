@@ -71,9 +71,9 @@ Chunking support (optional):
         runner's root directory, generating a directory for each scenario.
 
         Worker exceptions are re-raised in the caller after tasks complete.
-            Raises RuntimeError if a launched executable exits unsuccessfully.
-            Each scenario's stderr.log and stdout.log live in its output directory.
-            """
+        Raises RuntimeError if a launched executable exits unsuccessfully.
+        Each scenario's stderr.log and stdout.log live in its output directory.
+        """
         if not isinstance(inputs, list):
             raise TypeError("inputs must be a list of scenario inputs")
 
