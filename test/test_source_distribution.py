@@ -44,7 +44,7 @@ class SourceDistributionAssetsTests(unittest.TestCase):
 
     def test_sdist_contains_the_tutorial_notebook_and_packaging_regression(self):
         root = Path(__file__).resolve().parents[1]
-        notebook = 'tutorial/notebooks/02_run_prepare_plot/01_single_scenario_partmc.ipynb'
+        notebook = 'tutorial/notebooks/01_run_models/01_single_scenario_partmc.ipynb'
         with tempfile.TemporaryDirectory() as folder:
             staging = Path(folder)
             checkout = staging / 'source'
